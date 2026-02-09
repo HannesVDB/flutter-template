@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="iPhone 16e - iOS 26.2 - 84923432-0229-4B9A-A2C2-49A96D64E81F" tests="1" failures="0" time="18.0">
+    <testcase id="splash_then_login" name="splash_then_login" classname="splash_then_login" time="18.0" status="SUCCESS">
+      <properties/>
+    </testcase>
+  </testsuite>
+</testsuites>

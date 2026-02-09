@@ -1,0 +1,19 @@
+# Reusable login screen steps (no launch, no clearState).
+# Expects: app already running and login screen visible (e.g. after splash).
+# Use from flow/splash_then_login.yaml or from screen/login/login_test.yaml after launch.
+# appId required by Maestro; parent flow already has app launched when this runs as subflow.
+
+appId: com.icapps.fluttertemplate.dev
+---
+- tapOn:
+    text: "Email"
+- inputText: "test@example.com"
+- tapOn:
+    text: "Password"
+- inputText: "password123"
+- assertVisible:
+    text: "Login"
+    enabled: true
+- tapOn:
+    text: "Login"
+- stopApp

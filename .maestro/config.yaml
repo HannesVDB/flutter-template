@@ -1,0 +1,2 @@
+# Test artifacts (screenshots, logs, etc.) go here. Path is relative to project root.
+testOutputDir: maestro
