@@ -13,3 +13,4 @@ appId: com.icapps.fluttertemplate.dev
     commands:
       - tapOn:
           text: "Accept"
+- runFlow: ../login/login_steps.yaml

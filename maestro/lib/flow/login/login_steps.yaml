@@ -5,6 +5,8 @@
 
 appId: com.icapps.fluttertemplate.dev
 ---
+- launchApp
+- clearKeychain
 - tapOn:
     text: "Email"
 - inputText: "test@example.com"
