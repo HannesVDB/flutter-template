@@ -13,10 +13,3 @@ appId: com.icapps.fluttertemplate.dev
     commands:
       - tapOn:
           text: "Accept"
-# Wait for splash to complete and login screen (Email hint visible)
-- extendedWaitUntil:
-    visible:
-      text: "Email"
-    timeout: 18000
-# Run login steps without relaunching or clearing state
-- runFlow: login_steps.yaml

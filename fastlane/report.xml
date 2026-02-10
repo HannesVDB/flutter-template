@@ -5,37 +5,54 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Verifying fastlane version" time="0.000183">
+      <testcase classname="fastlane.lanes" name="0: Verifying fastlane version" time="0.000187">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: is_ci" time="8.0e-05">
+      <testcase classname="fastlane.lanes" name="1: is_ci" time="9.2e-05">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: install_provisioning_profiles" time="0.105418">
+      <testcase classname="fastlane.lanes" name="2: install_provisioning_profiles" time="0.053414">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: is_ci" time="0.000176">
+      <testcase classname="fastlane.lanes" name="3: is_ci" time="0.000115">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: echo No\ build\ nr\ set,\ USING\ DEFAULT\ \(1\)" time="0.006442">
+      <testcase classname="fastlane.lanes" name="4: echo No\ build\ nr\ set,\ USING\ DEFAULT\ \(1\)" time="0.005753">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: clean_build_artifacts" time="0.000139">
+      <testcase classname="fastlane.lanes" name="5: clean_build_artifacts" time="0.000143">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: cobertura convert -i coverage/lcov.info -o coverage/coverage.xml" time="0.270353">
+      <testcase classname="fastlane.lanes" name="6: xcrun simctl shutdown booted" time="3.184917">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="7: xcrun simctl boot iPhone\ 16e" time="0.492336">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="8: xcrun simctl install booted /Users/hannesvandenberghe/Developer/flutter-template/build/ios/Debug-dev-iphonesimulator/Runner.app" time="10.503106">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="9: maestro test --format junit --output maestro/report.xml maestro/lib/flow/login/splash_then_login.yaml" time="5.070474">
+        
+          <failure message="/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in &apos;Fastlane::Actions.execute_action&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/fast_file.rb:224:in &apos;Fastlane::FastFile.sh&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/fast_file.rb:216:in &apos;Fastlane::FastFile#sh&apos;&#10;Fastfile:73:in &apos;block (2 levels) in Fastlane::FastFile#parsing_binding&apos;&#10;Fastfile:72:in &apos;Dir.chdir&apos;&#10;Fastfile:72:in &apos;block in Fastlane::FastFile#parsing_binding&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/lane.rb:41:in &apos;Fastlane::Lane#call&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/runner.rb:49:in &apos;block in Fastlane::Runner#execute&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/runner.rb:45:in &apos;Dir.chdir&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/runner.rb:45:in &apos;Fastlane::Runner#execute&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/lane_manager.rb:46:in &apos;Fastlane::LaneManager.cruise_lane&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/command_line_handler.rb:34:in &apos;Fastlane::CommandLineHandler.handle&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/commands_generator.rb:110:in &apos;block (2 levels) in Fastlane::CommandsGenerator#run&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/commander-4.6.0/lib/commander/command.rb:187:in &apos;Commander::Command#call&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/commander-4.6.0/lib/commander/command.rb:157:in &apos;Commander::Command#run&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/commander-4.6.0/lib/commander/runner.rb:444:in &apos;Commander::Runner#run_active_command&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:124:in &apos;Commander::Runner#run!&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/commander-4.6.0/lib/commander/delegates.rb:18:in &apos;Commander::Delegates#run!&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/commands_generator.rb:363:in &apos;Fastlane::CommandsGenerator#run&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/commands_generator.rb:43:in &apos;Fastlane::CommandsGenerator.start&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/fastlane/lib/fastlane/cli_tools_distributor.rb:123:in &apos;Fastlane::CLIToolsDistributor.take_off&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/gems/fastlane-2.230.0/bin/fastlane:23:in &apos;&lt;top (required)&gt;&apos;&#10;/opt/homebrew/Cellar/ruby/4.0.0/lib/ruby/4.0.0/rubygems.rb:303:in &apos;Kernel#load&apos;&#10;/opt/homebrew/Cellar/ruby/4.0.0/lib/ruby/4.0.0/rubygems.rb:303:in &apos;Gem.activate_and_load_bin_path&apos;&#10;/opt/homebrew/Cellar/fastlane/2.230.0_1/libexec/bin/fastlane:25:in &apos;&lt;main&gt;&apos;&#10;&#10;Exit status of command &apos;maestro test --format junit --output maestro/report.xml maestro/lib/flow/login/splash_then_login.yaml&apos; was 1 instead of 0.&#10;WARNING: A restricted method in java.lang.System has been called&#10;WARNING: java.lang.System::load has been called by org.fusesource.jansi.internal.JansiLoader in an unnamed module (file:/opt/homebrew/Cellar/maestro/2.1.0/libexec/lib/jansi-2.4.1.jar)&#10;WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module&#10;WARNING: Restricted methods will be blocked in a future release unless native access is enabled&#10;&#10;&#10;Failed to parse file: /Users/hannesvandenberghe/Developer/flutter-template/maestro/lib/flow/login/splash_then_login.yaml&#10;List is empty.&#10;" />
         
       </testcase>
     

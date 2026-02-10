@@ -59,6 +59,23 @@ lane :pr do
   git_reset
 end
 
+lane :run_maestro_test do
+  # Make sure booted is shutdown
+  sh("xcrun", "simctl", "shutdown", "booted")
+  sleep(3)
+
+  project_root = File.expand_path("..", __dir__)
+  app = File.realpath(Dir["#{project_root}/**/*.app"].first)
+  sh("xcrun", "simctl", "boot", "iPhone 16e")
+  sh("xcrun", "simctl", "install", "booted", app)
+
+  Dir.chdir(project_root) do
+    sh("maestro", "test", "--format", "junit", "--output", "maestro/report.xml", "maestro/lib/flow/login/splash_then_login.yaml")
+  end
+
+  sh("xcrun", "simctl", "shutdown", "booted")
+end
+
 lane :ci_alpha do
     ensure_git_status_clean
     pr

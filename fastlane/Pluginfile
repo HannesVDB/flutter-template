@@ -4,3 +4,4 @@
 
 gem 'fastlane-plugin-install_provisioning_profiles'
 gem 'fastlane-plugin-firebase_app_distribution'
+gem "fastlane-plugin-maestro", git: "https://github.com/inf2381/fastlane-plugin-maestro.git", branch: "main"
