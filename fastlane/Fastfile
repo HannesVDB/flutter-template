@@ -75,7 +75,7 @@ lane :run_maestro_test do
         end
   # Build only if no existing simulator build found
   if app.nil?
-    Dir.chdir(project_root) do
+    Dir.chdir ".." do
       xcodebuild(
         configuration: "Debug-dev",
         scheme: "Runner",
