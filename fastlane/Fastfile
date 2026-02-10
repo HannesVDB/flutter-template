@@ -78,11 +78,19 @@ lane :run_maestro_test do
     workspace_path = File.join(project_root, "ios", "Runner.xcworkspace")
     derived_data = File.join(project_root, "build", "ios", "iphonesimulator")
     UI.user_error!("Workspace not found at #{workspace_path}. Run from project root or check path.") unless File.exist?(workspace_path)
+    # Prepare iOS build: pub get + pod install (required for CI; xcodebuild alone misses deps)
+    Dir.chdir(project_root) do
+      sh("fvm", "flutter", "pub", "get")
+      Dir.chdir("ios") do
+        sh("pod", "install")
+      end
+    end
+    # Disable code signing for simulator to avoid CI signing failures
     xcodebuild(
       configuration: "Debug-dev",
       scheme: "dev",
       workspace: workspace_path,
-      xcargs: "-quiet -sdk 'iphonesimulator' -destination 'generic/platform=iOS Simulator'",
+      xcargs: "-quiet -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO",
       derivedDataPath: derived_data
     )
     # xcodebuild puts .app in Build/Products/<Config>-iphonesimulator/; fallback to glob
