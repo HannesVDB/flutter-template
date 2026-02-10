@@ -88,7 +88,7 @@ lane :run_maestro_test do
     app = File.exist?(app_path) ? File.realpath(app_path) : ( (f = Dir["#{project_root}/**/*.app"].first) ? File.realpath(f) : nil )
     UI.user_error!("No .app bundle found after build. Expected simulator build at #{app_path}.") if app.nil?
   end
-  sh("xcrun", "simctl", "boot", "iPhone 16e")
+  sh("xcrun", "simctl", "boot", "iPhone 15")
   sh("xcrun", "simctl", "install", "booted", app)
 
   Dir.chdir(project_root) do
