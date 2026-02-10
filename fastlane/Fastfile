@@ -65,7 +65,22 @@ lane :run_maestro_test do
   sleep(3)
 
   project_root = File.expand_path("..", __dir__)
-  app = File.realpath(Dir["#{project_root}/**/*.app"].first)
+  app_path = File.join(project_root, "build", "ios", "iphonesimulator", "Runner.app")
+  # Resolve .app: prefer Flutter's simulator path, then glob for local Xcode builds
+  app = if File.exist?(app_path)
+          File.realpath(app_path)
+        else
+          first = Dir["#{project_root}/**/*.app"].first
+          first ? File.realpath(first) : nil
+        end
+  # Build only if no existing simulator build found
+  if app.nil?
+    Dir.chdir(project_root) do
+      sh("fvm", "flutter", "build", "ios", "--simulator", "--flavor", "alpha", "-t", "lib/main_alpha.dart")
+    end
+    app = File.exist?(app_path) ? File.realpath(app_path) : ( (f = Dir["#{project_root}/**/*.app"].first) ? File.realpath(f) : nil )
+    UI.user_error!("No .app bundle found after build. Expected simulator build at #{app_path}.") if app.nil?
+  end
   sh("xcrun", "simctl", "boot", "iPhone 16e")
   sh("xcrun", "simctl", "install", "booted", app)
 
