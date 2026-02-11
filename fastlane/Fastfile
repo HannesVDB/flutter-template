@@ -74,7 +74,7 @@ lane :run_maestro_test do
           first ? File.realpath(first) : nil
         end
   # Build only if no existing simulator build found
-  if app.nil?
+  # if app.nil?
     workspace_path = File.join(project_root, "ios", "Runner.xcworkspace")
     derived_data = File.join(project_root, "build", "ios", "iphonesimulator")
     UI.user_error!("Workspace not found at #{workspace_path}. Run from project root or check path.") unless File.exist?(workspace_path)
@@ -97,7 +97,7 @@ lane :run_maestro_test do
     xcode_app = File.join(derived_data, "Build", "Products", "Debug-dev-iphonesimulator", "Runner.app")
     app = File.exist?(xcode_app) ? File.realpath(xcode_app) : ( (f = Dir["#{project_root}/**/*.app"].first) ? File.realpath(f) : nil )
     UI.user_error!("No .app bundle found after build. Expected at #{xcode_app} or under #{project_root}.") if app.nil?
-  end
+  # end
   sh("xcrun", "simctl", "boot", "iPhone 15")
   sh("xcrun", "simctl", "install", "booted", app)
 
