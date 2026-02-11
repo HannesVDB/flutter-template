@@ -102,7 +102,7 @@ lane :run_maestro_test do
   sh("xcrun", "simctl", "install", "booted", app)
 
   Dir.chdir(project_root) do
-    sh("maestro", "test", "--format", "junit", "--output", "maestro/report.xml", "maestro/lib/flow/login/splash_then_login.yaml")
+    sh("maestro", "test", "--format", "junit", "--output", "maestro/report.xml", "maestro/lib/flow/splash/splash_then_login.yaml")
   end
 
   sh("xcrun", "simctl", "shutdown", "booted")
