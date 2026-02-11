@@ -60,10 +60,6 @@ lane :pr do
 end
 
 lane :run_maestro_test do
-  # Make sure booted is shutdown
-  sh("xcrun", "simctl", "shutdown", "booted")
-  sleep(3)
-
   project_root = File.expand_path("..", __dir__)
   app_path = File.join(project_root, "build", "ios", "iphonesimulator", "Runner.app")
   # Resolve .app: prefer Flutter's simulator path, then glob for local Xcode builds
@@ -82,6 +78,7 @@ lane :run_maestro_test do
     Dir.chdir(project_root) do
       sh("fvm", "flutter", "pub", "get")
       Dir.chdir("ios") do
+        sh("fvm", "flutter", "precache", "--ios")
         sh("pod", "install")
       end
     end
@@ -98,6 +95,9 @@ lane :run_maestro_test do
     app = File.exist?(xcode_app) ? File.realpath(xcode_app) : ( (f = Dir["#{project_root}/**/*.app"].first) ? File.realpath(f) : nil )
     UI.user_error!("No .app bundle found after build. Expected at #{xcode_app} or under #{project_root}.") if app.nil?
   # end
+  # Make sure booted is shutdown
+  sh("xcrun", "simctl", "shutdown", "booted")
+  sleep(3)
   sh("xcrun", "simctl", "boot", "iPhone 15")
   sh("xcrun", "simctl", "install", "booted", app)
 
