@@ -105,6 +105,8 @@ lane :run_maestro_test do
     sh("maestro", "test", "--format", "junit", "--output", "maestro/report.xml", "maestro/lib/flow/splash/splash_then_login.yaml")
   end
 
+  UI.success("Maestro test completed")
+
   sh("xcrun", "simctl", "shutdown", "booted")
 end
 
