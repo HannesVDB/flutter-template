@@ -101,7 +101,7 @@ PODS:
     - GoogleUtilities/UserDefaults (~> 8.0)
     - nanopb (~> 3.30910.0)
     - PromisesSwift (~> 2.1)
-  - FirebaseSharedSwift (11.15.0)
+  - FirebaseSharedSwift (11.6.0)
   - FirebaseStorage (11.6.0):
     - FirebaseAppCheckInterop (~> 11.0)
     - FirebaseAuthInterop (~> 11.0)
@@ -222,6 +222,7 @@ DEPENDENCIES:
   - firebase_crashlytics (from `.symlinks/plugins/firebase_crashlytics/ios`)
   - firebase_remote_config (from `.symlinks/plugins/firebase_remote_config/ios`)
   - firebase_storage (from `.symlinks/plugins/firebase_storage/ios`)
+  - FirebaseSharedSwift (= 11.6.0)
   - Flutter (from `Flutter`)
   - flutter_key_value_file_storage (from `.symlinks/plugins/flutter_key_value_file_storage/ios`)
   - flutter_secure_file_storage (from `.symlinks/plugins/flutter_secure_file_storage/ios`)
@@ -321,7 +322,7 @@ SPEC CHECKSUMS:
   FirebaseRemoteConfig: ee5161282c4e857ad81c0197cd8baec9d5dfef0e
   FirebaseRemoteConfigInterop: 1c6135e8a094cc6368949f5faeeca7ee8948b8aa
   FirebaseSessions: 9529d14180868e29a8da164b3a729c036204918b
-  FirebaseSharedSwift: e17c654ef1f1a616b0b33054e663ad1035c8fd40
+  FirebaseSharedSwift: a4e5dfca3e210633bb3a3dfb94176c019211948b
   FirebaseStorage: 52fb65a69d3e87675186881a08e2a5db86452ace
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   flutter_key_value_file_storage: dd821102c911b4e0f694f7b6baef0db3ceca6d9d
@@ -345,6 +346,6 @@ SPEC CHECKSUMS:
   sqlite3_flutter_libs: c26d86af4ad88f1465dc4e07e6dc6931eef228e4
   url_launcher_ios: 694010445543906933d732453a59da0a173ae33d
 
-PODFILE CHECKSUM: cc1f88378b4bfcf93a6ce00d2c587857c6008d3b
+PODFILE CHECKSUM: 0d1ee666e9af47c190ee24de47a16a5e45a0b229
 
 COCOAPODS: 1.16.2
