@@ -5,57 +5,62 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.000191">
+      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.00042">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: is_ci" time="0.000281">
+      <testcase classname="fastlane.lanes" name="01: is_ci" time="0.000314">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: install_provisioning_profiles" time="0.243019">
+      <testcase classname="fastlane.lanes" name="02: install_provisioning_profiles" time="0.159608">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: is_ci" time="0.000116">
+      <testcase classname="fastlane.lanes" name="03: is_ci" time="0.000105">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: echo No\ build\ nr\ set,\ USING\ DEFAULT\ \(1\)" time="0.007886">
+      <testcase classname="fastlane.lanes" name="04: echo No\ build\ nr\ set,\ USING\ DEFAULT\ \(1\)" time="0.007837">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: clean_build_artifacts" time="0.000149">
+      <testcase classname="fastlane.lanes" name="05: clean_build_artifacts" time="0.000162">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: xcrun simctl shutdown booted" time="0.122071">
+      <testcase classname="fastlane.lanes" name="06: fvm flutter pub get" time="1.487392">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: fvm flutter pub get" time="1.480321">
+      <testcase classname="fastlane.lanes" name="07: fvm flutter precache --ios" time="0.424932">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: pod install" time="3.7163">
+      <testcase classname="fastlane.lanes" name="08: pod install" time="11.534027">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: xcodebuild" time="26.218814">
+      <testcase classname="fastlane.lanes" name="09: xcodebuild" time="106.595162">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: xcrun simctl boot iPhone\ 15" time="0.123607">
+      <testcase classname="fastlane.lanes" name="10: xcrun simctl shutdown booted" time="0.11829">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: xcrun simctl boot iPhone\ 15" time="0.123021">
         
           <failure message="/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/fast_file.rb:224:in `sh&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/fast_file.rb:216:in `sh&apos;&#10;Fastfile:101:in `block in parsing_binding&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/lane.rb:41:in `call&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/runner.rb:45:in `chdir&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/runner.rb:45:in `execute&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/lane_manager.rb:46:in `cruise_lane&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/command_line_handler.rb:34:in `handle&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/commands_generator.rb:110:in `block (2 levels) in run&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/commander-4.6.0/lib/commander/command.rb:187:in `call&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/commander-4.6.0/lib/commander/command.rb:157:in `run&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/commander-4.6.0/lib/commander/runner.rb:444:in `run_active_command&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:124:in `run!&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/commander-4.6.0/lib/commander/delegates.rb:18:in `run!&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/commands_generator.rb:363:in `run&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/commands_generator.rb:43:in `start&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/fastlane/lib/fastlane/cli_tools_distributor.rb:132:in `take_off&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/gems/fastlane-2.232.0/bin/fastlane:23:in `&lt;top (required)&gt;&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/bin/fastlane:25:in `load&apos;&#10;/Users/hannesvandenberghe/.rvm/gems/ruby-3.0.0/bin/fastlane:25:in `&lt;main&gt;&apos;&#10;&#10;Exit status of command &apos;xcrun simctl boot iPhone\ 15&apos; was 148 instead of 0.&#10;Invalid device or device pair: iPhone 15&#10;" />
         
