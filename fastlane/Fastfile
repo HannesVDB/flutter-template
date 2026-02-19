@@ -98,7 +98,7 @@ lane :run_maestro_test do
   # Make sure booted is shutdown
   sh("xcrun", "simctl", "shutdown", "booted")
   sleep(3)
-  sh("xcrun", "simctl", "boot", "iPhone 16e")
+  sh("xcrun", "simctl", "boot", "iPhone 16")
   sleep(60)
   sh("xcrun", "simctl", "install", "booted", app)
   sleep(60)
