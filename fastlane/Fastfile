@@ -96,12 +96,12 @@ lane :run_maestro_test do
     UI.user_error!("No .app bundle found after build. Expected at #{xcode_app} or under #{project_root}.") if app.nil?
   # end
   # Make sure booted is shutdown
-  sh("xcrun", "simctl", "shutdown", "booted")
-  sleep(3)
-  sh("xcrun", "simctl", "boot", "iPhone 16")
-  sleep(60)
+  # sh("xcrun", "simctl", "shutdown", "booted")
+  # sleep(3)
+  # sh("xcrun", "simctl", "boot", "iPhone 16e")
+  # sleep(60)
   sh("xcrun", "simctl", "install", "booted", app)
-  sleep(60)
+  # sleep(60)
   Dir.chdir(project_root) do
     sh("maestro", "test", "--format", "junit", "--output", "maestro/report.xml", "maestro/lib/flow/splash/splash_then_login.yaml")
   end
